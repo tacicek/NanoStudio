@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ImageUploader } from './components/ImageUploader';
-import { processImageRequest } from './services/geminiService';
+import { processImageWithN8n } from './services/n8nService';
 import { GeneratedImage } from './types';
 import { Wand2, Download, AlertCircle, Trash2, History, Image as ImageIcon } from 'lucide-react';
 import { Spinner } from './components/Spinner';
@@ -11,6 +11,7 @@ const App: React.FC = () => {
   const [result, setResult] = useState<GeneratedImage | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [useN8n, setUseN8n] = useState(false);
 
   const handleImageSelected = (base64: string, mimeType: string) => {
     setInputImage({ data: base64, mimeType });
@@ -34,11 +35,7 @@ const App: React.FC = () => {
     setError(null);
 
     try {
-      const generatedData = await processImageRequest(
-        prompt,
-        inputImage?.data,
-        inputImage?.mimeType
-      );
+      const generatedData = await processImageWithN8n(prompt, inputImage?.data, inputImage?.mimeType);
       setResult(generatedData);
     } catch (err: any) {
       setError(err.message || "Something went wrong while generating the image.");
@@ -74,7 +71,7 @@ const App: React.FC = () => {
             </h1>
           </div>
           <div className="text-xs text-slate-400 font-mono hidden sm:block">
-            Powered by Gemini 2.5 Flash Image
+            Powered by Fal.ai Flux Pro
           </div>
         </div>
       </header>

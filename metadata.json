@@ -1,5 +1,5 @@
 {
   "name": "NanoStudio AI",
-  "description": "A professional image editing and generation suite powered by Gemini 2.5 Flash Image. Edit existing photos with natural language or create new assets from scratch.",
+  "description": "A professional image editing and generation suite powered by Fal.ai Flux Pro via N8N. Edit existing photos with natural language or create new assets from scratch.",
   "requestFramePermissions": []
 }
