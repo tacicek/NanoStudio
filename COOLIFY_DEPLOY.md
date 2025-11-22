@@ -65,11 +65,25 @@ docker run -p 3000:80 \
 
 Tüm dosyalar hazır, deploy edebilirsiniz!
 
+## ⚠️ ÖNEMLİ: İlk Deploy
+
+Coolify eski commit'i cache'lemiş olabilir. Şunları yapın:
+
+1. **Coolify'da uygulamanızı silin**
+2. **Yeniden oluşturun** (New Resource → Application)
+3. Git repo'yu tekrar bağlayın
+4. Environment variable'ı ekleyin
+5. Deploy edin
+
+Veya:
+
+- Application Settings → **Force Rebuild Without Cache**
+
 ## 🐛 Sorun Giderme
 
 **Build hatası alıyorsanız:**
-- Logs'u kontrol edin
-- Environment variable'ların doğru girildiğinden emin olun
+- Force Rebuild Without Cache deneyin
+- En son commit'in çekildiğinden emin olun (commit: abdb0ba)
 
 **Uygulama açılmıyorsa:**
 - Port 80'in expose edildiğini kontrol edin
