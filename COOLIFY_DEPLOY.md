@@ -19,7 +19,7 @@
 Coolify'da sadece N8N webhook URL'ini ekleyin:
 
 ```
-N8N_WEBHOOK_URL=https://n8n.g53.ch/webhook/6d59b41c-223e-47c8-9186-4bd81541da72
+N8N_WEBHOOK_URL=https://designx.app.n8n.cloud/webhook/6d59b41c-223e-47c8-9186-4bd81541da72
 ```
 
 **Nasıl Eklenir:**
@@ -50,7 +50,7 @@ docker build -t nanostudio .
 
 # Run container
 docker run -p 3000:80 \
-  -e N8N_WEBHOOK_URL=https://n8n.g53.ch/webhook/6d59b41c-223e-47c8-9186-4bd81541da72 \
+  -e N8N_WEBHOOK_URL=https://designx.app.n8n.cloud/webhook/6d59b41c-223e-47c8-9186-4bd81541da72 \
   nanostudio
 
 # Test: http://localhost:3000
