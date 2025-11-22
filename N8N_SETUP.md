@@ -8,7 +8,7 @@
 
 ## Webhook URL:
 ```
-https://your-n8n-instance.com/webhook/6d59b41c-223e-47c8-9186-4bd81541da72
+https://designx.app.n8n.cloud/webhook/6d59b41c-223e-47c8-9186-4bd81541da72
 ```
 
 ## Gelen Veri Formatı:
